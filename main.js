@@ -6,10 +6,12 @@ const third = document.querySelector(".third");
 const fourth = document.querySelector(".fourth");
 const randomBtn = document.querySelector(".random-btn");
 
+//랜덤버튼 이벤트 리스너
 randomBtn.addEventListener("click", () => {
   getRandomNum();
 });
 
+//랜덤넘버 가져오는 함수
 function getRandomNum() {
   let num1 = Math.floor(Math.random() * 500);
   let num2 = Math.floor(Math.random() * 500);
@@ -17,6 +19,8 @@ function getRandomNum() {
   let num4 = Math.floor(Math.random() * 500);
   getNum(num1, num2, num3, num4);
 }
+
+//랜덤넘버 비교하는 함수
 function getNum(num1, num2, num3, num4) {
   if (
     num1 !== num2 &&
@@ -32,6 +36,7 @@ function getNum(num1, num2, num3, num4) {
   }
 }
 
+//카운터 애니메이션
 function counter(counter, num) {
   let now = num;
   const handle = setInterval(() => {
@@ -45,8 +50,8 @@ function counter(counter, num) {
 }
 
 function innerHtml(num1, num2, num3, num4) {
-  setTimeout(() => counter(first, num1), 2000);
-  setTimeout(() => counter(second, num2), 3000);
-  setTimeout(() => counter(third, num3), 4000);
-  setTimeout(() => counter(fourth, num4), 5000);
+  setTimeout(() => counter(first, num1), 1000);
+  setTimeout(() => counter(second, num2), 2500);
+  setTimeout(() => counter(third, num3), 3500);
+  setTimeout(() => counter(fourth, num4), 4500);
 }
